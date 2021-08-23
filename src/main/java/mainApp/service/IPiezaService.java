@@ -17,4 +17,6 @@ public interface IPiezaService {
 	
 	public void eliminarPieza(int id);
 	
+	public List<Pieza> listarXNombre(String nombre);
+	
 }

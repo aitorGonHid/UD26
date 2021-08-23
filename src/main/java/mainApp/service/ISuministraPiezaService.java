@@ -17,4 +17,6 @@ public interface ISuministraPiezaService {
 	
 	public void eliminarSuministraPieza(int id);
 	
+	public List<SuministraPieza> listarXPrecio(Double precio);
+	
 }

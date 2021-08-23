@@ -45,4 +45,10 @@ public class SuministraPiezaServiceImpl implements ISuministraPiezaService {
 		iSuministraPiezaDao.deleteById(id);
 	}
 
+	@Override
+	public List<SuministraPieza> listarXPrecio(Double precio) {
+		
+		return iSuministraPiezaDao.findByPrecio(precio);
+	}
+
 }

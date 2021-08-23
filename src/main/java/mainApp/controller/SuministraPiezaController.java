@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import mainApp.dto.Proveedor;
 import mainApp.dto.SuministraPieza;
 import mainApp.service.SuministraPiezaServiceImpl;
 
@@ -68,5 +67,10 @@ public class SuministraPiezaController {
 	@DeleteMapping("/suministraPieza/{id}")
 	public void eliminarSuministraPieza(@PathVariable(name="id")int id) {
 		suminstraPiezaServiceImpl.eliminarSuministraPieza(id);
+	}
+	
+	@GetMapping("/suministraPieza/precio/{precio}")
+	public List<SuministraPieza> listarXPrecio(@PathVariable(name="precio")double precio) {
+		return suminstraPiezaServiceImpl.listarXPrecio(precio);
 	}
 }

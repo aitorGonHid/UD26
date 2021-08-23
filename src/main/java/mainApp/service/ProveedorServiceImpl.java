@@ -44,4 +44,10 @@ public class ProveedorServiceImpl implements IProveedorService {
 		iProveedorDao.deleteById(id);
 	}
 
+	@Override
+	public List<Proveedor> listarXNombre(String nombre) {
+		
+		return iProveedorDao.findByNombre(nombre);
+	}
+
 }

@@ -68,4 +68,9 @@ public class ProveedorController {
 	public void eliminarProveedor(@PathVariable(name="id")int id) {
 		proveedorServiceImpl.eliminarProveedor(id);
 	}
+	
+	@GetMapping("/proveedores/nombre/{nombre}")
+	public List<Proveedor> listarXNombre(@PathVariable(name="nombre")String nombre) {
+		return proveedorServiceImpl.listarXNombre(nombre);
+	}
 }

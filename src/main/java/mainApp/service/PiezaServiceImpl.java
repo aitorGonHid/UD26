@@ -44,4 +44,10 @@ public class PiezaServiceImpl implements IPiezaService {
 		iPiezaDao.deleteById(id);
 	}
 
+	@Override
+	public List<Pieza> listarXNombre(String nombre) {
+		
+		return iPiezaDao.findByNombre(nombre);
+	}
+
 }

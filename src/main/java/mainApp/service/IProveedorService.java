@@ -17,4 +17,6 @@ public interface IProveedorService {
 	
 	public void eliminarProveedor(int id);
 	
+	public List<Proveedor> listarXNombre(String nombre);
+	
 }

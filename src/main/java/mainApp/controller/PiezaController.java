@@ -26,8 +26,8 @@ public class PiezaController {
 	public List<Pieza> listarPiezas(){
 		return piezaServiceImpl.listarPiezas();
 	}
-	
-	
+
+
 	@PostMapping("/piezas")
 	public Pieza guardarPieza(@RequestBody Pieza pieza) {
 		
@@ -67,5 +67,10 @@ public class PiezaController {
 	@DeleteMapping("/piezas/{id}")
 	public void eliminarPieza(@PathVariable(name="id")int id) {
 		piezaServiceImpl.eliminarPieza(id);
+	}
+	
+	@GetMapping("/piezas/nombre/{nombre}")
+	public List<Pieza> listarXNombre(@PathVariable(name="nombre")String nombre) {
+		return piezaServiceImpl.listarXNombre(nombre);
 	}
 }
